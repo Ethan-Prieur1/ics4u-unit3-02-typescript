@@ -9,14 +9,13 @@
 import promptSync from 'prompt-sync'
 
 function factorialInteger(integer: number): number {
-        if (integer < 0) {
-          return -1
-        } else if (integer = 0) {
-          return 1
-        } else {
-          return factorialInteger(integer * (integer -1))
-
-        }
+  if (integer < 0) {
+    return -1
+  } else if ((integer = 0)) {
+    return 1
+  } else {
+    return factorialInteger(integer * (integer - 1))
+  }
 }
 
 function main() {
