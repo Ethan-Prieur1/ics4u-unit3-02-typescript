@@ -20,8 +20,8 @@ function factorial(integer: number): number {
   return answer
 }
 
-  const prompt = promptSync()
-  const userNumber = prompt('Enter a Number: ')
-  const userInteger = parseInt(userNumber)
-  console.log(`The Factorial of ${userInteger} is ${factorial(userInteger)}`)
-  console.log('\nDone.')
+const prompt = promptSync()
+const userNumber = prompt('Enter a Number: ')
+const userInteger = parseInt(userNumber)
+console.log(`The Factorial of ${userInteger} is ${factorial(userInteger)}`)
+console.log('\nDone.')
