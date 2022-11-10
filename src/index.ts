@@ -8,20 +8,20 @@
 
 import promptSync from 'prompt-sync'
 
-function factorialInteger(integer: number): number {
+function factorial(integer: number): number {
+  let answer
   if (integer < 0) {
-    return -1
+    answer = -1
   } else if ((integer = 0)) {
-    return 1
+    answer = 1
   } else {
-    return factorialInteger(integer * (integer - 1))
+    return factorial(integer - 1) * integer
   }
+  return answer
 }
 
-function main() {
   const prompt = promptSync()
-  const userNumber = prompt('Enter a Number to Find the Factorial: ')
-  console.log(`The Factorial of ${userNumber} is ${factorialInteger(integer)}`)
+  const userNumber = prompt('Enter a Number: ')
+  const userInteger = parseInt(userNumber)
+  console.log(`The Factorial of ${userInteger} is ${factorial(userInteger)}`)
   console.log('\nDone.')
-}
-main()
